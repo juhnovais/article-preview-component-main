@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/juhnovais/social-proof-section-main)
-- Live Site URL: [Social proof section](https://juhnovais.github.io/social-proof-section-main/)
+- Solution URL: [GitHub](https://github.com/juhnovais/article-preview-component-main)
+- Live Site URL: [Social proof section](https://juhnovais.github.io/article-preview-component-main)
 
 ## My process
 
