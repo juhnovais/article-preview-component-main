@@ -1,0 +1,218 @@
+// ## Colors
+
+$veryDarkGrayishBlue: hsl(217, 19%, 35%);
+$desaturatedDarkBlue: hsl(214, 17%, 51%);
+$grayishBlue: hsl(212, 23%, 69%);
+$lightGrayishBlue: hsl(210, 46%, 95%);
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: $lightGrayishBlue;
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+
+    p,
+    h1 {
+        color: $veryDarkGrayishBlue;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    main {
+        background-color: #ffffff;
+        max-width: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-flow: column;
+
+        @media only screen and (min-width: 960px) {
+            max-width: 750px;
+            flex-flow: row;
+            overflow: visible;
+        }
+
+        .mainImg {
+            display: block;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            @media only screen and (min-width: 960px) {
+                width: 100%;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .contentWrap {
+            display: flex;
+            flex-flow: column;
+            position: relative;
+
+            @media only screen and (min-width: 960px) {
+                position: relative;
+            }
+
+
+            section {
+                padding-top: 36px;
+                padding-right: 36px;
+                padding-left: 36px;
+            }
+
+            .author {
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 36px;
+                transition: 2s;
+
+                @media only screen and (min-width: 960px) {
+                    display: flex !important;
+                }
+
+                .authorWrap {
+                    display: flex;
+                    flex-flow: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                }
+
+                .avatar {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+
+                }
+
+                .authorDetails {
+                    p {
+                        margin: 0;
+
+                        &.authorName {
+                            font-weight: 700;
+                        }
+
+                        &.publishedDate {
+                            color: $grayishBlue;
+                        }
+                    }
+
+                }
+
+                .share {
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $lightGrayishBlue;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            }
+
+            .shareActive {
+                background-color: $veryDarkGrayishBlue;
+                padding: 20px 36px;
+                display: none;
+                flex-flow: row;
+                align-items: center;
+                justify-content: space-between;
+                position: absolute;
+                bottom: 0;
+                width: 328px;
+                right: 0;
+                z-index: 100;
+                transition: 2s;
+
+                @media only screen and (min-width: 960px) {
+                    position: absolute;
+                    right: -40px;
+                    bottom: 86px;
+                    padding: 0px 20px;
+                    z-index: 100;
+                    border-radius: 10px;
+                    width: auto;
+
+                    &::after {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-left: 15px solid transparent;
+                        border-right: 15px solid transparent;
+                        border-top: 10px solid $veryDarkGrayishBlue;
+                        position: absolute;
+                        bottom: -9px;
+                        left: 45%;
+                        text-align: center;
+                    }
+                }
+
+                .shareSocial {
+                    display: flex;
+                    flex-flow: row;
+                    gap: 20px;
+                    align-items: center;
+
+                    .social {
+                        img {
+                            margin: 0 5px;
+                        }
+
+                    }
+
+
+                }
+
+                p {
+                    color: $grayishBlue;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                }
+
+                .back {
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $grayishBlue;
+                    border-radius: 50%;
+                    cursor: pointer;
+
+                    @media only screen and (min-width: 960px) {
+                        display: none;
+                    }
+
+                }
+            }
+        }
+    }
+}
